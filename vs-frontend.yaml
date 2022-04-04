@@ -4,7 +4,7 @@ metadata:
   name: frontend-vs
 spec:
   hosts:
-    - nsfrontend.sreyo.in
+    - "*"
   gateways:
     - gateway
   http:
