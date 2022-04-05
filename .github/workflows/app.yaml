@@ -47,7 +47,7 @@ jobs:
       run: |
         kubectl delete secret ssl-secret -n istio-system --ignore-not-found 
         kubectl create secret generic ssl-secret -n istio-system --from-literal=api-token=$API_TOKEN
-        kubectl get secrets ssl-secret -o yaml
+        kubectl get secrets -n istio-system ssl-secret -o yaml 
     
         
     # Deploy docorized app image to the GKE cluster
