@@ -59,11 +59,9 @@ jobs:
         kubectl rollout status deployment frontend-deployment
 
  
-    # Deploy gateway and virtual services
+    # Deploy virtual services
     - name: Deploy gateway
       run: |-
-        kubectl apply -f gateway.yaml
-        kubectl get svc -l=istio=ingressgateway -n istio-system
         kubectl apply -f vs-frontend.yaml
         
 
